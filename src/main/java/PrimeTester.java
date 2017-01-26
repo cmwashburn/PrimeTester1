@@ -29,10 +29,15 @@ public class PrimeTester {
 
         for (int primeTest = lowerLimit; primeTest <= upperLimit; primeTest++) {
 
-            if(!(primeTest % 2 == 0)){
-                
+            if(primeTest % 2 > 0 && primeTest % 3 > 0 && primeTest % 5 > 0 && primeTest % 7 > 0){
+                primes.add(primeTest);
             }
+
         }
+
+        primes.forEach(prime -> {
+            System.out.println(prime);
+        });
 
     }
 
